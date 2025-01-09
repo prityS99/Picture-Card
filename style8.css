@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.blog{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    padding: 0;
+
+
+}
+.animated-background{
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(255,0,0,0.5), rgba(0,0,255,0.5));
+    animation: animateBg 5s infinite linear; /* Background animation */
+}
+.container{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 160px;
+}
+.container::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 123, 255, 0.3); /* Light blue circle */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 1;
+    animation: expandCircle 3s ease-in-out infinite;
+}
+.row{
+    margin:0 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-25{
+    max-width:25.25%;
+    padding: 0 -10px;
+    flex: 0 0 25%;
+
+}
+.card-image img{
+    max-width: 100%;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card-content{
+    background: whitesmoke;
+    box-shadow: 2px 4px 6px orange;
+    padding: 20px 40px;
+    position: relative;
+    top: -10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card-content h3{
+    color: brown;
+    margin-bottom: 20px;
+}
+
+.card-content p{
+    color: black;
+
+}
+
+@keyframes animateBg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes animateBg {
+    0% {
+        background: linear-gradient(90deg, rgba(255,0,0,0.5), rgba(0,0,255,0.5));
+    }
+    50% {
+        background: linear-gradient(90deg, rgba(0,255,0,0.5), rgba(0,0,255,0.5));
+    }
+    100% {
+        background: linear-gradient(90deg, rgba(255,0,0,0.5), rgba(0,0,255,0.5));
+    }
+}
+
+
+
+
